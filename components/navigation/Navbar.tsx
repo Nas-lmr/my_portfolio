@@ -11,8 +11,12 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ backgroundColor: "#18181b" }}>
-        <Toolbar>
+      <AppBar
+        position="fixed"
+        elevation={0}
+        sx={{ backgroundColor: "transparent", height: "10vh" }}
+      >
+        <Toolbar sx={{ height: "100%" }}>
           <Box
             component="img"
             src={Logo.src}
@@ -23,7 +27,7 @@ export default function Navbar() {
             component="nav"
             sx={{
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "flex-end",
               alignItems: "center",
               gap: "10vh",
               width: "90vw",
@@ -41,8 +45,16 @@ export default function Navbar() {
                     pathname === "/"
                       ? `4px solid ${activeStyle.borderColor}`
                       : "",
+                  fontWeight: pathname === "/" ? 500 : 400,
                 }}
               >
+                <span
+                  style={{
+                    color: " #34d399",
+                  }}
+                >
+                  01.
+                </span>{" "}
                 Home
               </Typography>
             </Link>
@@ -57,8 +69,16 @@ export default function Navbar() {
                     pathname === "/about-me"
                       ? `4px solid ${activeStyle.borderColor}`
                       : "",
+                  fontWeight: pathname === "/about-me" ? 500 : 400,
                 }}
               >
+                <span
+                  style={{
+                    color: " #34d399",
+                  }}
+                >
+                  02.
+                </span>{" "}
                 About me
               </Typography>
             </Link>
@@ -73,8 +93,16 @@ export default function Navbar() {
                     pathname === "/my-projects"
                       ? `4px solid ${activeStyle.borderColor}`
                       : "",
+                  fontWeight: pathname === "/my-projects" ? 500 : 400,
                 }}
               >
+                <span
+                  style={{
+                    color: " #34d399",
+                  }}
+                >
+                  03.
+                </span>{" "}
                 My Projects
               </Typography>
             </Link>
@@ -83,14 +111,22 @@ export default function Navbar() {
                 textAlign="center"
                 variant="h6"
                 component="div"
-                className="hover:text-emerald-400 hover:border-b-4 border-emerald-400 pb-3 pt-3 transition-all duration-100 ease-in-out"
+                className=" text-zinc-50 hover:text-emerald-400 hover:border-b-4 border-emerald-400 pb-3 pt-3 transition-all duration-100 ease-in-out"
                 sx={{
                   borderBottom:
                     pathname === "/contact"
                       ? `4px solid ${activeStyle.borderColor}`
                       : "",
+                  fontWeight: pathname === "/contact" ? 500 : 400,
                 }}
               >
+                <span
+                  style={{
+                    color: " #34d399",
+                  }}
+                >
+                  04.
+                </span>{" "}
                 Contact me
               </Typography>
             </Link>
