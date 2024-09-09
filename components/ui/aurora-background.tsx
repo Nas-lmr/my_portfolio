@@ -16,7 +16,7 @@ export const AuroraBackground = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-100 dark:bg-zinc-900  text-slate-950 transition-bg",
+        "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-900 dark:bg-zinc-900  text-slate-950 transition-bg",
         className
       )}
       {...props}
@@ -28,9 +28,8 @@ export const AuroraBackground = ({
             `
             [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
 [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)]
-[--aurora:repeating-linear-gradient(100deg,var(--green-600)_10%,var(--emerald-500)_15%,var(--green-500)_20%,var(--emerald-400)_25%,var(--green-600)_30%)]
+[--aurora:repeating-linear-gradient(100deg,var(--emerald-300)_10%,var(--emerald-500)_15%,var(--green-500)_20%,var(--emerald-400)_25%,var(--emerald-300)_30%)]
 [background-image:var(--white-gradient),var(--aurora)]
-dark:[background-image:var(--dark-gradient),var(--aurora)]
 [background-size:300%,_200%]
 [background-position:50%_50%,50%_50%]
 filter blur-[10px] invert dark:invert-0

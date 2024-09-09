@@ -1,15 +1,16 @@
 "use client";
 import BoxReveal from "@/components/ui/box-reveal";
-import { Container, Typography } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
+import { Titillium_Web } from "@next/font/google";
 import { motion } from "framer-motion";
-import { Poppins } from "next/font/google";
 import { AuroraBackground } from "../components/ui/aurora-background";
 
+const spartan = Titillium_Web({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 export default function Home() {
-  const poppins = Poppins({
-    weight: "400",
-    subsets: ["latin"],
-  });
   return (
     <main>
       <AuroraBackground>
@@ -37,17 +38,42 @@ export default function Home() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="relative flex flex-col gap-4 px-4 "
+            className="relative flex flex-col gap-4  "
           >
             <BoxReveal>
-              <Typography variant="h1" className={poppins.className}>
+              <Typography
+                variant="h1"
+                className={`${spartan.className} text-zinc-300`}
+                textAlign="center"
+                sx={{
+                  fontWeight: "700",
+                  fontSize: "15vh",
+                  width: "100vw",
+                }}
+              >
                 LAMAMRA NASREDDINE
               </Typography>
             </BoxReveal>
           </motion.div>
           <BoxReveal>
-            <Typography textAlign="center">Fullstack Developper</Typography>
+            <Typography
+              className={`${spartan.className} text-emerald-600`}
+              textAlign="center"
+              sx={{
+                fontWeight: "400",
+                fontSize: "8vh",
+                width: "50vw",
+              }}
+            >
+              Fullstack Developper
+            </Typography>
           </BoxReveal>
+          <Button
+            variant="outlined"
+            className="rounded-3xl bg-zinc-800 border-emerald-500"
+          >
+            ARHAAA
+          </Button>
         </Container>
       </AuroraBackground>
     </main>

@@ -1,8 +1,10 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 export default function page() {
   return (
     <Container
+      maxWidth={false}
+      className="bg-zinc-900"
       sx={{
         width: "100vw",
         height: "100vh",
@@ -11,7 +13,10 @@ export default function page() {
         alignItems: "center",
       }}
     >
-      <h1>BLABLABAKAAAA</h1>
+      <Typography variant="h2" className="text-emerald-400">
+        {" "}
+        ARHAAAAAAAAA
+      </Typography>
     </Container>
   );
 }
